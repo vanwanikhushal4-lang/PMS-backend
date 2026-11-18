@@ -1,0 +1,37 @@
+.DS_Store
+Thumbs.db
+
+# Build output and local runtime
+target/
+.qa/
+.scm-runtime/
+*.class
+*.war
+*.ear
+*.log
+
+# Local IDE state
+.classpath
+.project
+.metadata/
+.settings/
+.sts4-cache/
+.idea/
+*.iml
+**/nbproject/private/
+
+# Dependencies are resolved by Maven
+node_modules/
+/ojdbc6.jar
+
+# Deployment credentials belong outside version control
+.env
+.env.*
+!.env.example
+src/main/resources/application.properties
+*.local.properties
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks

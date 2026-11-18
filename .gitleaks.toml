@@ -1,0 +1,15 @@
+title = "SCM secret scanning"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Verified pdfmake source-map identifier names, not credential values"
+condition = "AND"
+paths = ['''src/main/webapp/static/AdminLTE_3/plugins/pdfmake/pdfmake(?:\.min)?(?:_1)?\.js(?:_1)?\.map$''']
+regexTarget = "match"
+regexes = [
+  '''^getOwnerPasswordR2R3R4","getEncryptionKeyR2R3R4"$''',
+  '''^ownerEncryptionKeyEntry","getOwnerEncryptionKeyR5"$''',
+  '''^processedOwnerPassword","getEncryptionKeyR5"$''',
+]

@@ -1,0 +1,94 @@
+/*body{
+  margin-top: 50px;
+  background-color: #f1f1f1;
+} */
+/*.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+  background-color: #17A2B8;
+}*/
+/*.dropdown-menu show {
+     padding-top:0;
+    overflow-x: hidden;
+    position: absolute;
+   width: max-content;
+   float: right;
+    top: 0px;
+    left: 0px;
+    will-change: transform;
+     transform: translate3d(-106px, 50px, 0px);
+      
+}*/
+
+/*.dropdown-menu {
+  
+    overflow-x: hidden;
+    padding: 5px;
+    position: absolute;
+   width: fit-content;
+   float: right;
+    top: 0px;
+    left: 0px;
+    will-change: transform;
+     
+     transform: translate3d(-106px, 50px, 0px);
+}*/
+.hover2 { background:#2c96d6 !important; }
+
+.notification-box{
+      padding: 5px;
+    height: 400px;
+/*    overflow-x: hidden;
+    overflow-y: scroll;*/
+    width: 255px;   
+}
+.dropdown-menu{
+    position: absolute; /* Reposition logo from the natural layout */
+    font-size: 11px;
+     padding-top:0;
+    /*height: 400px;*/
+        /*padding: 0px 0px;*/
+  top: 60px;
+  right: 0px;
+  /*left: unset;*/
+  z-index: 2;
+  width: fit-content;
+  box-shadow: 0px 5px 7px -1px #c1c1c1;
+  padding-bottom: 0px;
+  /*padding: 0px;*/
+}
+/*.dropdown-menu:before{
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 12px;
+  border:10px solid #343A40;
+  border-color: transparent transparent #343A40 transparent;
+}*/
+/*.head{
+  padding:5px 15px;
+  border-radius: 3px 3px 0px 0px;
+}
+.footer{
+  padding:5px 15px;
+  border-radius: 0px 0px 3px 3px; 
+}*/
+/*.notification-box{
+  padding: 10px 0px; 
+}
+.bg-gray{
+  background-color: #eee;
+}*/
+
+/*    .dropdown-menu{
+      top: 50px;
+      left: -16px;  
+      width: 230px;
+    } */
+/*    .nav{
+      display: block;
+    }*/
+/*    .nav .nav-item,.nav .nav-item a{
+      padding-left: 0px;
+    }*/
+/*    .message{
+      font-size: 13px;
+    }*/

@@ -1,0 +1,72 @@
+
+$('#spin1').hide();
+window.onload = function() {
+//	alert("ID "+$('#crnoo').val());
+	
+	$('#taskNo').text($('#crnoo').val());
+	var l = window.location;
+	var base_url = l.protocol + "//" + l.host + "/" + l.pathname.split('/')[1];
+	// var serviceUrl = base_url + "/PMS/getDevTaskDetails"
+	var serviceUrl = base_url + "/PMS/getDevAssignedTaskDetails";
+
+	$.ajax({
+		url : serviceUrl,
+		type : 'POST',
+		dataType : 'json',
+		data : "crno=" + $('#crnoo').val() + "&tid=" + $('#tid').val()
+	}).done(function(data) {
+		// alert("t details " + data)
+		console.log(data);
+
+		$('#functionName').val(decodeURIComponent(data[0][0]));
+		$('#Module_Name').val(decodeURIComponent(data[0][1]));
+		$('#Responsibility').val(decodeURIComponent(data[0][2]));
+		$('#Manager_Name').val(decodeURIComponent(data[0][3]));
+		$('#Team_Leader').val(decodeURIComponent(data[0][4]));
+		$('#Developer').val(decodeURIComponent(data[0][5]));
+
+		$('#Start_Date').val(decodeURIComponent(data[0][6]));
+		$('#End_Date').val(decodeURIComponent(data[0][7]));
+		$('#Status').val(decodeURIComponent(data[0][8]));
+		$('#Remark').val(decodeURIComponent(data[0][9]));
+
+		if (typeof data[0][10] === "undefined") {
+			$('#Description').val("NA");
+		} else {
+			$('#Description').val(decodeURIComponent(data[0][10]));
+		}
+		
+		if(data[0][11]==null){
+			$('#DivCustomer').hide();
+		}else
+			{
+			$('#DivCustomer').show();
+			$('#customer_name').val(decodeURIComponent(data[0][11]));
+			}
+		
+		
+		
+		if(data[0][12]==null){
+			$('#DivProductName').hide();
+		}else
+			{
+			$('#DivProductName').show();
+			$('#product_name').val(decodeURIComponent(data[0][12]));
+			
+			}
+		
+		if(data[0][13]==null){
+			$('#DivSuitName').hide();
+		}else
+			{
+			$('#DivSuitName').show();
+			$('#suit_name').val(decodeURIComponent(data[0][13]));
+			
+			}
+		
+		
+		$('#Task_Priority').val(decodeURIComponent(data[0][14]));
+
+	});
+}
+
